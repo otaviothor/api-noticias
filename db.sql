@@ -20,6 +20,7 @@ CREATE TABLE noticias (
   autor_id INT NOT NULL,
   titulo VARCHAR(255) NOT NULL,
   subtitulo VARCHAR(255) NOT NULL,
+  slug VARCHAR(255) NOT NULL,
   descricao TEXT NOT NULL,
   ativo TINYINT(1) NOT NULL DEFAULT 1,
   publicada_em DATETIME,
