@@ -6,10 +6,20 @@ namespace App\Models\Author;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class ImageNews
+ * @package App\Models\Author
+ */
 class ImageNews extends Model
 {
+    /**
+     * @var string
+     */
     protected $table = 'imagens_noticias';
 
+    /**
+     * @var string[]
+     */
     protected $fillable = [
         'noticia_id',
         'imagem',
@@ -17,8 +27,14 @@ class ImageNews extends Model
         'criado_em',
     ];
 
+    /**
+     * @var bool
+     */
     public $timestamps = false;
 
+    /**
+     * @var array|string[]
+     */
     public array $rules = [
         'noticia_id' => 'required|numeric',
         'imagem' => 'required',
