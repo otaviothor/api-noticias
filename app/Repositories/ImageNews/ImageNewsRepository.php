@@ -23,6 +23,10 @@ class ImageNewsRepository extends AbstractRepository
             ->toArray();
     }
 
+    /**
+     * @param int $newsId
+     * @return bool
+     */
     public function deleteByNews(int $newsId): bool
     {
         $result = $this->model::where('noticia_id', $newsId)
