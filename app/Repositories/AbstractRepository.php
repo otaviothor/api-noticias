@@ -99,7 +99,12 @@ abstract class AbstractRepository implements RepositoryInterface
      * @param array $orderBy
      * @return array
      */
-    public function searchBy(string $string, array $searchFields, int $limit = 10, array $orderBy = []): array
+    public function searchBy(
+        string $string,
+        array $searchFields,
+        int $limit = 10,
+        array $orderBy = []
+    ): array
     {
         $results = $this->model::where($searchFields[0], 'like', '%' . $string . '%');
 
