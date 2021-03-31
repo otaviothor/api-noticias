@@ -95,7 +95,7 @@ class NewsRepository extends AbstractRepository
     public function deleteByAuthor(int $authorId): bool
     {
         $news = $this->model::where('autor_id', $authorId)
-            delete();
+            ->delete();
 
         return $news ? true : false;
     }
