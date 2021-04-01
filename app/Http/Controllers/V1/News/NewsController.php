@@ -80,10 +80,8 @@ class NewsController extends AbstractController
     public function deleteBy(Request $request, string $param): JsonResponse
     {
         try {
-            $result = $this->service->deleteBy($param);
-            $response = $this->successResponse([
-                'deletado' => $result
-            ]);
+            $result['deletado'] = $this->service->deleteBy($param);
+            $response = $this->successResponse($result);
         } catch (Exception $e) {
             $response = $this->errorResponse($e);
         }
@@ -99,10 +97,8 @@ class NewsController extends AbstractController
     public function deleteByAuthor(Request $request, int $author): JsonResponse
     {
         try {
-            $result = $this->service->deleteByAuthor($author);
-            $response = $this->successResponse([
-                'deletado' => $result
-            ]);
+            $result['deletado'] = $this->service->deleteByAuthor($author);
+            $response = $this->successResponse($result);
         } catch (Exception $e) {
             $response = $this->errorResponse($e);
         }
