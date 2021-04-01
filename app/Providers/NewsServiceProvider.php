@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use App\Models\Author\News;
+use App\Models\News\News;
 use App\Repositories\News\NewsRepository;
 use App\Services\News\NewsService;
 use Illuminate\Support\ServiceProvider;
