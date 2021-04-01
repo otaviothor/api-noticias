@@ -6,7 +6,6 @@ namespace App\Http\Controllers\V1\Author;
 
 use App\Http\Controllers\AbstractController;
 use App\Services\Author\AuthorService;
-use App\Services\ServiceInterface;
 
 /**
  * Class AuthorController
