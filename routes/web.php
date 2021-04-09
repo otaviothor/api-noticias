@@ -70,7 +70,7 @@ $router->group(['prefix' => 'api/v1', 'namespace' => 'V1\ImageNews'], function (
     $router->get('/imagens-noticias', [
         'uses' => 'ImageNewsController@findAll'
     ]);
-    $router->get('/imagens-noticias/{news}', [
+    $router->get('/imagens-noticias/noticias/{news}', [
         'uses' => 'ImageNewsController@findByNews'
     ]);
     $router->get('/imagens-noticias/{id}', [

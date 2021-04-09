@@ -70,7 +70,7 @@ abstract class AbstractService implements ServiceInterface
      */
     public function delete(int $id): bool
     {
-        return $this->repository->delete(id);
+        return $this->repository->delete($id);
     }
 
     /**

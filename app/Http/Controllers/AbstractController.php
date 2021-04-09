@@ -60,7 +60,7 @@ abstract class AbstractController extends BaseController implements ControllerIn
     {
         try {
             $limit = (int) $request->get('limit', 10);
-            $orderBy = (int) $request->get('order_by', []);
+            $orderBy = $request->get('order_by', []);
             $searchString = $request->get('q', '');
 
             if (!empty($searchString)) {
