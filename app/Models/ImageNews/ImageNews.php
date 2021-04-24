@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Models\Author;
+namespace App\Models\ImageNews;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -24,6 +24,7 @@ class ImageNews extends Model
         'noticia_id',
         'imagem',
         'descricao',
+        'ativo',
         'criado_em',
     ];
 

@@ -70,7 +70,7 @@ $router->group(['prefix' => 'api/v1', 'namespace' => 'V1\ImageNews'], function (
     $router->get('/imagens-noticias', [
         'uses' => 'ImageNewsController@findAll'
     ]);
-    $router->get('/imagens-noticias/noticias/{news}', [
+    $router->get('/imagens-noticias/noticia/{news}', [
         'uses' => 'ImageNewsController@findByNews'
     ]);
     $router->get('/imagens-noticias/{id}', [
@@ -82,10 +82,10 @@ $router->group(['prefix' => 'api/v1', 'namespace' => 'V1\ImageNews'], function (
     $router->patch('/imagens-noticias/{param}', [
         'uses' => 'ImageNewsController@editBy'
     ]);
-    $router->delete('/imagens-noticias/noticias/{news}', [
-        'uses' => 'NewsController@deleteByNews'
+    $router->delete('/imagens-noticias/noticia/{news}', [
+        'uses' => 'ImageNewsController@deleteByNews'
     ]);
-    $router->delete('/imagens-noticias/{news}', [
-        'uses' => 'NewsController@deleteBy'
+    $router->delete('/imagens-noticias/{id}', [
+        'uses' => 'ImageNewsController@delete'
     ]);
 });
