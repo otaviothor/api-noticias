@@ -33,7 +33,7 @@ Nesse projeto foi desenvolvido uma API RESTful de notícias usando o microframew
 
 ## Melhorias
 - validar os dados enviados na requisição
-- gerar o slug na notícia baseado no nome
+- gerar o slug baseado no título da notícia
 - preencher o campo updated_at ao atualizar algum valor
 
 ### Gostou do projeto, dê uma estrela ⭐
