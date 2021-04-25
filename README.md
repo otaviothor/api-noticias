@@ -14,20 +14,22 @@ Nesse projeto foi desenvolvido uma API RESTful de notícias usando o microframew
 ### Rotas de notícia
 - `POST base_url/api/v1/noticias`
 - `GET base_url/api/v1/noticias`
-- `GET base_url/api/v1/noticias{author}`
-- `GET base_url/api/v1/noticias{param}`
-- `PUT base_url/api/v1/noticias{param}`
-- `PATCH base_url/api/v1/noticias{param}`
-- `DELETE base_url/api/v1/noticias{author}`
-- `DELETE base_url/api/v1/noticias{param}`
+- `GET base_url/api/v1/noticias/{author}`
+- `GET base_url/api/v1/noticias/{param}`
+- `PUT base_url/api/v1/noticias/{param}`
+- `PATCH base_url/api/v1/noticias/{param}`
+- `DELETE base_url/api/v1/noticias/{author}`
+- `DELETE base_url/api/v1/noticias/{param}`
 
 ### Rotas de imagens da notícia
-- `GET base_url/api/v1/imagens-noticias`
-- `SHOW base_url/api/v1/imagens-noticias`
 - `POST base_url/api/v1/imagens-noticias`
-- `PUT base_url/api/v1/imagens-noticias`
-- `PATCH base_url/api/v1/imagens-noticias`
-- `DELETE base_url/api/v1/imagens-noticias`
+- `GET base_url/api/v1/imagens-noticias`
+- `GET base_url/api/v1/imagens-noticias/{news}`
+- `GET base_url/api/v1/imagens-noticias/{id}`
+- `PUT base_url/api/v1/imagens-noticias/{param}`
+- `PATCH base_url/api/v1/imagens-noticias/{param}`
+- `DELETE base_url/api/v1/imagens-noticias/{news}`
+- `DELETE base_url/api/v1/imagens-noticias/{id}`
 
 ## Melhorias
 - validar os dados enviados na requisição
