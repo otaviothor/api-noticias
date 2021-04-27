@@ -39,22 +39,22 @@ Nesse projeto foi desenvolvido uma API RESTful de notícias usando o microframew
 ### Rotas de notícia
 - `POST base_url/api/v1/noticias`
 - `GET base_url/api/v1/noticias`
-- `GET base_url/api/v1/noticias/{author}`
 - `GET base_url/api/v1/noticias/{param}`
+- `GET base_url/api/v1/noticias/autor/{author}`
 - `PUT base_url/api/v1/noticias/{param}`
 - `PATCH base_url/api/v1/noticias/{param}`
-- `DELETE base_url/api/v1/noticias/{author}`
 - `DELETE base_url/api/v1/noticias/{param}`
+- `DELETE base_url/api/v1/noticias/autor/{author}`
 
 ### Rotas de imagens da notícia
 - `POST base_url/api/v1/imagens-noticias`
 - `GET base_url/api/v1/imagens-noticias`
-- `GET base_url/api/v1/imagens-noticias/{news}`
 - `GET base_url/api/v1/imagens-noticias/{id}`
+- `GET base_url/api/v1/imagens-noticias/noticia/{news}`
 - `PUT base_url/api/v1/imagens-noticias/{param}`
 - `PATCH base_url/api/v1/imagens-noticias/{param}`
-- `DELETE base_url/api/v1/imagens-noticias/{news}`
 - `DELETE base_url/api/v1/imagens-noticias/{id}`
+- `DELETE base_url/api/v1/imagens-noticias/noticia/{news}`
 
 ## Melhorias
 - validar os dados enviados na requisição
