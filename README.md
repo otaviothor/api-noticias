@@ -4,7 +4,32 @@ Nesse projeto foi desenvolvido uma API RESTful de notícias usando o microframew
 ## Descrição da rotas
 
 ### Rotas do autor
-- `POST base_url/api/v1/autores`
+`POST base_url/api/v1/autores`
+```json
+// corpo da requisicao em json
+{
+	"nome": "Nome",
+	"sobrenome": "Sobrenome",
+	"email": "seu@email.com",
+	"senha": "senha",
+	"sexo": "M", // M para masculino ou F para feminino
+	"ativo": true // true ou false
+}
+
+// resposta da requisicao em json
+{  
+  "status_code": 201, 
+  "data": {
+    "nome": "Nome",
+    "sobrenome": "Sobrenome",
+    "email": "seu@email.com",
+    "sexo": "M", 
+    "ativo": true,
+    "id": 1
+  }  
+}
+```
+
 - `GET base_url/api/v1/autores`
 - `GET base_url/api/v1/autores/{id}`
 - `PUT base_url/api/v1/autores/{param}`
