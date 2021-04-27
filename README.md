@@ -8,12 +8,12 @@ Nesse projeto foi desenvolvido uma API RESTful de notícias usando o microframew
 ```json
 // corpo da requisicao em json
 {
-	"nome": "Nome",
-	"sobrenome": "Sobrenome",
-	"email": "seu@email.com",
-	"senha": "senha",
-	"sexo": "M", // M para masculino ou F para feminino
-	"ativo": true // true ou false
+  "nome": "Nome",
+  "sobrenome": "Sobrenome",
+  "email": "seu@email.com",
+  "senha": "senha",
+  "sexo": "M", // M para masculino ou F para feminino
+  "ativo": true // true ou false
 }
 
 // resposta da requisicao em json
