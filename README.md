@@ -56,9 +56,13 @@ Nesse projeto foi desenvolvido uma API RESTful de notícias usando o microframew
 - `DELETE base_url/api/v1/imagens-noticias/{id}`
 - `DELETE base_url/api/v1/imagens-noticias/noticia/{news}`
 
-## Melhorias
+Veja a [documentação][docs_site] do projeto
+
+## Melhorias para implementar
 - validar os dados enviados na requisição
 - gerar o slug baseado no título da notícia
 - preencher o campo updated_at ao atualizar algum valor
 
 ### Gostou do projeto, dê uma estrela ⭐
+
+[docs_site]: https://github.com/otaviothor/api-noticias/tree/main/docs/documentation.md
