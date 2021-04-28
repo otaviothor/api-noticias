@@ -8,6 +8,4 @@ Veja a [documentação][docs_site] do projeto
 - gerar o slug baseado no título da notícia
 - preencher o campo updated_at ao atualizar algum valor
 
-### Gostou do projeto, dê uma estrela ⭐
-
 [docs_site]: https://github.com/otaviothor/api-noticias/tree/main/docs/documentation.md
