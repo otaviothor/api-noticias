@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\V1\News;
 
+use App\Helpers\OrderByHelpers;
 use App\Http\Controllers\AbstractController;
 use App\Services\News\NewsService;
 use Exception;
@@ -46,6 +47,11 @@ class NewsController extends AbstractController
         try {
             $limit = (int) $request->get('limit', 10);
             $orderBy = $request->get('order_by', []);
+
+            if (!empty($orderBy)) {
+                $orderBy = OrderByHelpers::treatOrderBy($orderBy);
+            }
+
 
             $result = $this->service->findByAuthor($author, $limit, $orderBy);
             $response = $this->successResponse($result, Response::HTTP_PARTIAL_CONTENT);
