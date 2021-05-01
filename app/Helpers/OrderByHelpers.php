@@ -12,6 +12,10 @@ use InvalidArgumentException;
  */
 class OrderByHelpers
 {
+    /**
+     * @param string $orderBy
+     * @return array
+     */
     public static function treatOrderBy(string $orderBy): array
     {
         $orderByArray = [];
