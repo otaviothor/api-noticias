@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
+use App\Helpers\OrderByHelpers;
 use App\Services\ServiceInterface;
 use Exception;
 use Illuminate\Http\JsonResponse;
@@ -61,6 +62,11 @@ abstract class AbstractController extends BaseController implements ControllerIn
         try {
             $limit = (int) $request->get('limit', 10);
             $orderBy = $request->get('order_by', []);
+
+            if (!empty($orderBy)) {
+                $orderBy = OrderByHelpers::treatOrderBy($orderBy);
+            }
+
             $searchString = $request->get('q', '');
 
             if (!empty($searchString)) {
