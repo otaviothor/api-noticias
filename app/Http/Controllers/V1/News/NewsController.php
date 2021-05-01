@@ -23,6 +23,7 @@ class NewsController extends AbstractController
      */
     protected array $searchFields = [
         'titulo',
+        'subtitulo',
         'slug'
     ];
 
