@@ -21,4 +21,15 @@ class AuthorService extends AbstractService
         $data['senha'] = encrypt($data['senha']);
         return $this->repository->create($data);
     }
+
+    /**
+     * @param string $param
+     * @param array $data
+     * @return bool
+     */
+    public function editBy(string $param, array $data): bool
+    {
+        $data['senha'] = encrypt($data['senha']);
+        return $this->repository->editBy($param, $data);
+    }
 }
