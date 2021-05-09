@@ -12,4 +12,13 @@ use App\Services\AbstractService;
  */
 class AuthorService extends AbstractService
 {
+    /**
+     * @param array $data
+     * @return array
+     */
+    public function create(array $data): array
+    {
+        $data['senha'] = encrypt($data['senha']);
+        return $this->repository->create($data);
+    }
 }
