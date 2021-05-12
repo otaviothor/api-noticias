@@ -50,9 +50,8 @@ class ImageNewsService extends AbstractService
      */
     public function editBy(string $param, array $data): bool
     {
-        if ($this->isImage($data['imagem'])) {
-            $data['imagem'] = base64_encode(file_get_contents($data['imagem']));
-        }
+        $this->isImage($data['imagem']);
+        $data['imagem'] = base64_encode(file_get_contents($data['imagem']));
 
         return $this->repository->editBy($param, $data);
     }
