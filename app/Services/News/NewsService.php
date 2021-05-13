@@ -68,7 +68,7 @@ class NewsService extends AbstractService
     public function create(array $data): array
     {
         $data['slug'] = Str::slug($data['titulo']);
-        return $this->repository->deleteByAuthor($authorId);
+        return $this->repository->create($data);
     }
 
     /**
@@ -82,6 +82,6 @@ class NewsService extends AbstractService
             $data['slug'] = Str::slug($data['titulo']);
         }
 
-        return $this->repository->deleteByAuthor($authorId);
+        return $this->repository->editBy($param, $data);
     }
 }
