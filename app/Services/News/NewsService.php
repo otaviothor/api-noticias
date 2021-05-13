@@ -43,16 +43,6 @@ class NewsService extends AbstractService
     }
 
     /**
-     * @param string $param
-     * @param array $data
-     * @return bool
-     */
-    public function editBy(string $param, array $data): bool
-    {
-        return $this->repository->editBy($param, $data);
-    }
-
-    /**
      * @param int $authorId
      * @return bool
      */
