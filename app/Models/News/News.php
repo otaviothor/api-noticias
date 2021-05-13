@@ -6,6 +6,7 @@ namespace App\Models\News;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Models\ImageNews;
+use Cviebrock\EloquentSluggable\Sluggable;
 
 /**
  * Class News
@@ -13,6 +14,8 @@ use App\Models\ImageNews;
  */
 class News extends Model
 {
+    use Sluggable;
+
     /**
      * @var string
      */
@@ -54,5 +57,20 @@ class News extends Model
     public function images()
     {
         return $this->hasMany(ImagesNews::class);
+    }
+
+    /**
+     * Return the sluggable configuration array for this model.
+     *
+     * @return array
+     */
+    public function sluggable(): array
+    {
+        return [
+            'slug' => [
+                'source' => 'titulo',
+                'onUpdate' => true
+            ]
+        ];
     }
 }
