@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\Repositories\News;
 
 use App\Repositories\AbstractRepository;
-use Illuminate\Support\Str;
 
 /**
  * Class NewsRepository
@@ -19,8 +18,6 @@ class NewsRepository extends AbstractRepository
      */
     public function create(array $data): array
     {
-
-        $data['slug'] = Str::slug($data['titulo'], '-');
         return $this->model::create($data)->toArray();
     }
 
@@ -75,10 +72,6 @@ class NewsRepository extends AbstractRepository
      */
     public function editBy(string $param, array $data): bool
     {
-        if (isset($data['titulo'])) {
-            $data['slug'] = Str::slug($data['titulo'], '-');
-        }
-
         if (is_numeric($param)) {
             $news = $this->model::find($param);
         } else {
