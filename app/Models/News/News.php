@@ -47,7 +47,6 @@ class News extends Model
         'autor_id' => 'required|numeric',
         'titulo' => 'required|min:20|max:255',
         'subtitulo' => 'required|min:20|max:255',
-        'slug' => 'required',
         'descricao' => 'required|min:100',
     ];
 
