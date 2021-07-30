@@ -1,0 +1,143 @@
+### get autores
+
+GET http://localhost:8000/api/v1/autores HTTP/1.1
+
+### get autor
+
+GET http://localhost:8000/api/v1/autores/3 HTTP/1.1
+
+### post autor
+
+POST http://localhost:8000/api/v1/autores HTTP/1.1
+content-type: application/json
+
+{
+  "nome": "Nome",
+  "sobrenome": "Sobrenome",
+  "email": "seu@email.com",
+  "senha": "123456",
+  "sexo": "M",
+  "ativo": true
+}
+
+### put autor
+
+PUT http://localhost:8000/api/v1/autores/3 HTTP/1.1
+content-type: application/json
+
+{
+  "nome": "Nome",
+  "sobrenome": "Sobrenome",
+  "email": "seu@email.com"
+}
+
+### patch autor
+
+PATCH http://localhost:8000/api/v1/autores/3 HTTP/1.1
+content-type: application/json
+
+{
+  "nome": "Nome",
+}
+
+### delete autor
+
+DELETE http://localhost:8000/api/v1/autores/3 HTTP/1.1
+
+### get noticias
+
+GET http://localhost:8000/api/v1/noticias HTTP/1.1
+
+### get noticia
+
+GET http://localhost:8000/api/v1/noticias/3 HTTP/1.1
+
+### get noticia by autor
+
+GET http://localhost:8000/api/v1/noticias/autor/1 HTTP/1.1
+
+### post noticia
+
+POST http://localhost:8000/api/v1/noticias HTTP/1.1
+content-type: application/json
+
+{
+    "autor_id": 4,
+    "titulo": "primeira noticia de teste",
+	"subtitulo": "subtitulo da primeira noticia de teste",
+	"descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis mollitia expedita aperiam! Aperiam aliquam eos, id, exercitationem hic architecto eius ex earum soluta quod quasi. Soluta dolor porro ut consectetur.",
+	"ativo": true
+}
+
+### put noticia
+
+PUT http://localhost:8000/api/v1/noticias/3 HTTP/1.1
+content-type: application/json
+
+{
+    "titulo": "primeira noticia de teste",
+	"subtitulo": "subtitulo da primeira noticia de teste"
+}
+
+### patch noticia
+
+PATCH http://localhost:8000/api/v1/noticias/3 HTTP/1.1
+content-type: application/json
+
+{
+    "titulo": "primeira noticia de teste"
+}
+
+### delete noticia
+
+DELETE http://localhost:8000/api/v1/noticias/3 HTTP/1.1
+
+### delete noticias by autor
+
+DELETE http://localhost:8000/api/v1/noticias/3 HTTP/1.1
+
+### get imagens-noticias
+GET http://localhost:8000/api/v1/imagens-noticias HTTP/1.1
+
+### get imagens-noticia
+GET http://localhost:8000/api/v1/imagens-noticias/1 HTTP/1.1
+
+### get imagens-noticia by noticia
+GET http://localhost:8000/api/v1/imagens-noticias/noticia/1 HTTP/1.1
+
+### post imagens-noticia
+POST http://localhost:8000/api/v1/imagens-noticias/ HTTP/1.1
+content-type: application/json
+
+{
+    "noticia_id": 1,
+	"imagem": "https://images.unsplash.com/photo-1581822261290-991b38693d1b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
+	"descricao": "imagem de astronauta",
+	"ativo": true
+}
+
+### put imagens-noticia
+PUT http://localhost:8000/api/v1/imagens-noticias/1 HTTP/1.1
+content-type: application/json
+
+{
+	"imagem": "https://images.unsplash.com/photo-1581822261290-991b38693d1b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
+	"descricao": "imagem de astronauta",
+	"ativo": true
+}
+
+### patch imagens-noticia
+PATCH http://localhost:8000/api/v1/imagens-noticias/1 HTTP/1.1
+content-type: application/json
+
+{
+	"imagem": "https://images.unsplash.com/photo-1581822261290-991b38693d1b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+}
+
+### delete imagens-noticia
+
+DELETE http://localhost:8000/api/v1/imagens-noticias/1 HTTP/1.1
+
+### delete imagens-noticia by noticia
+
+DELETE http://localhost:8000/api/v1/imagens-noticias/noticia/1 HTTP/1.1
